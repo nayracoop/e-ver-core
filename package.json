@@ -10,9 +10,11 @@
     "i18next-browser-languagedetector": "^4.2.0",
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.31",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.5.0",
+    "react-player": "^2.1.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
