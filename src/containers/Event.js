@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import Video from "./Video";
+import CommentList from "./CommentList";
+import TalkDetails from "./TalkDetails";
+import TalkList from "./TalkList";
+import SpeakerList from "./SpeakerList";
 
-const Event = ({props}) => {
+import { talks } from "../static-data";
+
+const speakersList = (talks) => {
+  return talks.map((talk) => talk.speaker);
+};
+
+const Event = ({ props }) => {
+  const [selectedTalk, setSelectedTalk] = useState(talks[0]);
+  const selectTalk = (talk) => setSelectedTalk(talk);
+
   return (
-    <div className="Event">
-
-    </div>
+    <>
+      <Video video={selectedTalk.video} />
+      <TalkDetails talk={selectedTalk} />
+      <TalkList talks={talks} onSelectTalk={selectTalk} />
+      <SpeakerList speakersList={speakersList(talks)} />
+    </>
   );
-}
+};
 
 export default Event;
