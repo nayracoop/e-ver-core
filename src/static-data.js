@@ -21,6 +21,7 @@ export const talks = [
       bio:
         "Nam tempor utamur gubergren no. Pri quas audiam virtute ut, case utamur fuisset eam ut, dolor in reprehenderit iisque accommodare an eam. Reque blandit qui eu, cu vix nonumy volumus. Intellegam fugiat nulla pariatur id usu, vide oporteat vix eu, id illud principes has.",
       company: "Second Life",
+      avatar: "avatar.png",
     },
     allowsComments: true,
   },
@@ -44,6 +45,7 @@ export const talks = [
       bio:
         "Nam tempor utamur gubergren no. Pri quas audiam virtute ut, case utamur fuisset eam ut, dolor in reprehenderit iisque accommodare an eam. Reque blandit qui eu, cu vix nonumy volumus. Intellegam fugiat nulla pariatur id usu, vide oporteat vix eu, id illud principes has.",
       company: "Third Life",
+      avatar: "avatar.png",
     },
     allowsComments: true,
   },
