@@ -2,18 +2,18 @@ import React from "react";
 import moment from "moment";
 import Speaker from "./Speaker";
 
-const TalkDetails = ({event}) => {
+const TalkDetails = ({ talk }) => {
   return (
     <section className="EventDetails">
-      <h2>{event.title}</h2>
+      <h2>{talk.title}</h2>
       <div className="timeDetails">
-        <span>Fecha {moment(event.begin).format("dddd D/M/YYYY HH:mm")}</span> | 
-        <span>Duración {event.duration} min.</span>
+        <span>Fecha {moment(talk.begin).format("dddd D/M/YYYY HH:mm")}</span> |
+        <span>Duración {talk.duration} min.</span>
       </div>
-      <p>{event.details}</p>
-      <Speaker speaker={event.speaker}/>
+      <p>{talk.details}</p>
+      <Speaker speaker={talk.speaker} />
     </section>
   );
-}
+};
 
 export default TalkDetails;

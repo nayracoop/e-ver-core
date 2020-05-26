@@ -1,7 +1,7 @@
 import React from "react";
 
-const SpeakerList = ({props}) => {
-
-}
+const SpeakerList = ({ props }) => {
+  return <></>;
+};
 
 export default SpeakerList;
