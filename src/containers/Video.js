@@ -1,7 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
+import ReactPlayer from "react-player";
 
-const Videos = ({props}) => {
-  return <div>I'm a video</div>
-}
+const Video = ({ video }) => {
+  const { URI, autoplay } = video;
+  return <ReactPlayer url={URI} playing={autoplay} />;
+};
 
-export default Videos;
+Video.propTypes = {
+  video: PropTypes.object.isRequired,
+};
+
+export default Video;
