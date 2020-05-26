@@ -1,0 +1,14 @@
+{
+  "translation": {
+    "menu": {
+      "language": "Language"
+    },
+    "talk": {
+      "date": "Date",
+      "time": "Time",
+      "event": "Event",
+      "description": "Description",
+      "speaker": "Speaker"
+    }
+  }
+}
