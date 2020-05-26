@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Video from "./Video";
 import CommentList from "./CommentList";
-import EventDetails from "./EventDetails";
-import EventList from "./EventList";
+import TalkDetails from "./TalkDetails";
+import TalkList from "./TalkList";
 import SpeakerList from "./SpeakerList";
 
 import { talks } from "../static-data";
@@ -20,10 +20,9 @@ const Event = ({ props }) => {
   return (
     <>
       <Video video={selectedTalk.video} />
-      <CommentList />
-      {/* <EventDetails talk={selectedTalk} /> */}
-      {/* <EventList talks={talks} onSelectTalk={selectTalk} /> */}
-      {/* <SpeakerList speakersList={speakersList(talks)} /> */}
+      <TalkDetails talk={selectedTalk} />
+      <TalkList talks={talks} onSelectTalk={selectTalk} />
+      <SpeakerList speakersList={speakersList(talks)} />
     </>
   );
 };
