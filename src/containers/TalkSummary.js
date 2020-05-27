@@ -1,10 +1,14 @@
 import React from "react";
 
-const TalkSummary = ({title, datetime, speakers, summary}) => {
+const TalkSummary = ({ onSelectTalk,talk }) => {
   return (
-    <>
-    <span>{ title }</span> | <span>{ datetime }</span> | <span>{ speakers.name }</span> | <span>{ summary }</span>
-    </>
+    <div  className="talkSummary">
+      <span>{ talk.title }</span> | 
+      <span>{ talk.datetime }</span> | 
+      <span>{ talk.speaker.name }</span> | 
+      <span>{ talk.summary }</span> | 
+      <button onClick={() => onSelectTalk(talk)}> ver </button>
+    </div>
   );
 }
 

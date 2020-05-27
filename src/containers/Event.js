@@ -4,11 +4,17 @@ import CommentList from "./CommentList";
 import TalkDetails from "./TalkDetails";
 import TalkList from "./TalkList";
 import SpeakerList from "./SpeakerList";
+import SponsorList from "./SponsorList";
 
-import { talks } from "../static-data";
+import { talks, sponsors } from "../static-data";
 
+// should be a unique speakers list
 const speakersList = (talks) => {
-  return talks.map((talk) => talk.speaker);
+  const speakers = talks.map((talk) => talk.speaker);
+  return Array.from(new Set(speakers.map(s => s.id)))
+    .map(id => {
+      return speakers.find(s => s.id === id)
+    });
 };
 
 const Event = ({ props }) => {
@@ -22,6 +28,7 @@ const Event = ({ props }) => {
       <TalkDetails talk={selectedTalk} />
       <TalkList talks={talks} onSelectTalk={selectTalk} />
       <SpeakerList speakersList={speakersList(talks)} />
+      <SponsorList sponsors={sponsors} />
     </>
   );
 };
