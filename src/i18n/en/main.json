@@ -9,6 +9,11 @@
       "event": "Event",
       "description": "Description",
       "speaker": "Speaker"
+    },
+    "comments": {
+      "from": "From",
+      "time": "Time",
+      "comment": "Comment"
     }
   }
 }

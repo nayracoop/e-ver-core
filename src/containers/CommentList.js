@@ -1,37 +1,46 @@
 import React, { useEffect, useState } from "react";
 import Comment from "./Comment";
 import socketIOClient from "socket.io-client";
+import {
+  uniqueNamesGenerator,
+  adjectives,
+  colors,
+  animals,
+} from "unique-names-generator";
+
+const randomName = uniqueNamesGenerator({
+  dictionaries: [adjectives, colors, animals],
+  length: 2,
+});
+const socket = socketIOClient(`?user=${randomName}`);
 
 const CommentList = ({ props }) => {
-  const [ioResponse, setIoRespose] = useState("");
+  const [commentList, setCommentList] = useState(new Set());
   const [comment, setComment] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("/api", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ comment }),
+    socket.emit("sendMessage", {
+      from: randomName,
+      text: comment,
     });
-    const body = await response.text();
-    console.log(body);
+    setComment("");
   };
 
   useEffect(() => {
-    const socket = socketIOClient("");
-    socket.on("PONG", (data) => {
-      console.log(data);
-      setIoRespose(data);
+    socket.on("receiveMessage", (message) => {
+      console.log("receiveMessage -- client side", message);
+      setCommentList((prev) => new Set(prev.add(message)));
     });
-  }, [setIoRespose]);
+
+    socket.on("joinMessage", (message) => {
+      console.log("receiveMessage -- client side", message);
+      setCommentList((prev) => new Set(prev.add(message)));
+    });
+  }, []);
 
   return (
     <>
-      <div>
-        I'm a comment list. And I got this from the socket: {ioResponse}
-      </div>
       <form onSubmit={handleSubmit}>
         <p>
           <strong>Post comment:</strong>
@@ -43,7 +52,9 @@ const CommentList = ({ props }) => {
         />
         <button type="submit">Submit</button>
       </form>
-      <Comment />
+      {[...commentList.values()].map((comment) => (
+        <Comment comment={comment} />
+      ))}
     </>
   );
 };

@@ -20,14 +20,15 @@
     "react-player": "^2.1.0",
     "react-scripts": "3.4.1",
     "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^2.3.0",
+    "unique-names-generator": "^4.2.0"
   },
   "scripts": {
     "startreact": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node-env-run --exec nodemon ./server.js | pino-colada",
+    "server": "node-env-run --exec nodemon ./server/server.js | pino-colada",
     "start": "run-p server startreact"
   },
   "eslintConfig": {

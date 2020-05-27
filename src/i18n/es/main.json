@@ -9,6 +9,11 @@
       "event": "Evento",
       "description": "Descripción",
       "speaker": "Presentador/a"
+    },
+    "comments": {
+      "from": "De",
+      "time": "Hora",
+      "comment": "Comentario"
     }
   }
 }
