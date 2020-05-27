@@ -15,8 +15,6 @@ const Event = ({ props }) => {
   const [selectedTalk, setSelectedTalk] = useState(talks[0]);
   const selectTalk = (talk) => setSelectedTalk(talk);
 
-  console.log(selectedTalk);
-
   return (
     <>
       <Video video={selectedTalk.video} />
