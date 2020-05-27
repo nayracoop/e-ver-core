@@ -26,6 +26,7 @@ const Event = ({ props }) => {
   return (
     <>
       <Video video={selectedTalk.video} />
+      <CommentList />
       <TalkDetails talk={selectedTalk} />
       <TalkList talks={talks} onSelectTalk={selectTalk} />
       <SpeakerList speakersList={speakersList(talks)} />
