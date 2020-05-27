@@ -34,7 +34,7 @@ export const talks = [
       "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
     summary:
       "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    begin: date.clone().add(4, "hour").format(),
+    begin: date.clone().add(2, "hour").format(),
     duration: 60,
     video: {
       URI: "https://www.youtube.com/watch?v=-smN6ZUHzgk",
@@ -60,7 +60,7 @@ export const talks = [
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.",
     summary:
       "Consectetur adipiscing elit, sed do eiusmod tempor",
-    begin: date.clone().add(1, "hour").format(),
+    begin: date.clone().add(3, "hour").format(),
     duration: 30,
     video: {
       URI: "https://www.youtube.com/watch?v=HcIOnyQPfa8",
@@ -79,4 +79,19 @@ export const talks = [
     },
     allowsComments: true,
   },
+];
+
+export const sponsors = [
+  {
+    id: 1,
+    name: "Fafa",
+    logo: "logo.png",
+    website: "https://nayra.coop"
+  },
+  {
+    id: 2,
+    name: "tutu",
+    logo: "logo.png",
+    website: "https://nayra.coop"
+  }
 ];
