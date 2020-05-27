@@ -14,7 +14,7 @@ const randomName = uniqueNamesGenerator({
 });
 const socket = socketIOClient(`?user=${randomName}`);
 
-const CommentList = ({ props }) => {
+const CommentList = ({ selectedTalk }) => {
   const [commentList, setCommentList] = useState(new Set());
   const [comment, setComment] = useState("");
 
@@ -29,12 +29,10 @@ const CommentList = ({ props }) => {
 
   useEffect(() => {
     socket.on("receiveMessage", (message) => {
-      console.log("receiveMessage -- client side", message);
       setCommentList((prev) => new Set(prev.add(message)));
     });
 
     socket.on("joinMessage", (message) => {
-      console.log("receiveMessage -- client side", message);
       setCommentList((prev) => new Set(prev.add(message)));
     });
   }, []);
