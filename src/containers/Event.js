@@ -6,7 +6,6 @@ import TalkList from "./TalkList";
 import SpeakerList from "./SpeakerList";
 
 import { talks } from "../static-data";
-import Speaker from "./Speaker";
 
 // should be a unique speakers list
 const speakersList = (talks) => {
@@ -21,7 +20,7 @@ const Event = ({ props }) => {
   const [selectedTalk, setSelectedTalk] = useState(talks[0]);
   const selectTalk = (talk) => setSelectedTalk(talk);
 
-  console.log(selectedTalk);
+  // console.log(selectedTalk);
 
   return (
     <>
