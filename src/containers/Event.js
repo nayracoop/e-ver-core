@@ -6,9 +6,15 @@ import TalkList from "./TalkList";
 import SpeakerList from "./SpeakerList";
 
 import { talks } from "../static-data";
+import Speaker from "./Speaker";
 
+// should be a unique speakers list
 const speakersList = (talks) => {
-  return talks.map((talk) => talk.speaker);
+  const speakers = talks.map((talk) => talk.speaker);
+  return Array.from(new Set(speakers.map(s => s.id)))
+    .map(id => {
+      return speakers.find(s => s.id === id)
+    });
 };
 
 const Event = ({ props }) => {
