@@ -1,7 +1,8 @@
 {
   "translation": {
     "menu": {
-      "language": "Language"
+      "language": "Language",
+      "timezone": "Time Zone"
     },
     "talk": {
       "date": "Date",

@@ -51,7 +51,7 @@ const CommentList = ({ selectedTalk }) => {
         <button type="submit">Submit</button>
       </form>
       {[...commentList.values()].map((comment) => (
-        <Comment comment={comment} />
+        <Comment key={`${comment.from}:${comment.time}`} comment={comment} />
       ))}
     </>
   );
