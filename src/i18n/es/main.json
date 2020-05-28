@@ -1,7 +1,8 @@
 {
   "translation": {
     "menu": {
-      "language": "Idioma"
+      "language": "Idioma",
+      "timezone": "Zona Horaria"
     },
     "talk": {
       "date": "Fecha",
@@ -9,6 +10,12 @@
       "event": "Evento",
       "description": "Descripción",
       "speaker": "Presentador/a"
-    }
+    },
+    "comments": {
+      "from": "De",
+      "time": "Hora",
+      "comment": "Comentario"
+    },
+    "about": "Este sería el about en castellano del evento"
   }
 }
