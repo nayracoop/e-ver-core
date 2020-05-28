@@ -16,7 +16,7 @@ export const talks = [
       autoplay: false,
       type: "live",
     },
-    speaker: {
+    speakers: [{
       id: 1,
       name: "Tulia Caradhro",
       bio:
@@ -24,7 +24,7 @@ export const talks = [
       company: "Second Life",
       avatar: "avatar.png",
       role: "Archiduki"
-    },
+    }],
     allowsComments: true,
   },
   {
@@ -42,7 +42,7 @@ export const talks = [
       autoplay: false,
       type: "recording",
     },
-    speaker: {
+    speakers: [{
       id: 2,
       name: "Paco Amd Plus",
       bio:
@@ -50,7 +50,7 @@ export const talks = [
       company: "Third Life",
       avatar: "avatar.png",
       role: "Chief Developer"
-    },
+    }],
     allowsComments: true,
   },
   {
@@ -68,7 +68,8 @@ export const talks = [
       autoplay: false,
       type: "recording",
     },
-    speaker: {
+    speakers: [
+      {
       id: 2,
       name: "Paco Amd Plus",
       bio:
@@ -76,7 +77,17 @@ export const talks = [
       company: "Third Life",
       avatar: "avatar.png",
       role: "Chief Developer"
-    },
+      },
+      {
+        id: 3,
+        name: "Dr Jeff Arzala",
+        bio: 
+          "Është një fakt gjerësisht i njohur që lexuesi do të hutohet nga përmbajtja e një faqeje gjatë kohës që shikon dizenjimin. Arsyeja e përdorimit të Lorem Ipsum është sepse ka pak a shumë distribucion normal të gërmave, ndryshe nga përdorimi i 'Përmbajtja këtu, përmbajtja këtu', që e bën të ngjajë me një gjuhë të lexueshme. Shumë aplikacione publikimi dhe editorë tani përdorin Lorem Ipsum si tektin e tyre bazë, dhe një kërkim 'lorem ipsum' do të shfaqë shumë faqe interneti të pambaruara që në vend të përmbajtjes kanë pikërisht tekstin Lorem Ipsum. Shumë versione kanë evoluar gjatë viteve, disa në mënyë kazuale, disa me qëllim (humor dhe gjëra të ngjashme).",
+        company: "The Coop International",
+        avatar: "avatar.png",
+        role: "Sheik"
+      }
+    ],
     allowsComments: true,
   },
 ];

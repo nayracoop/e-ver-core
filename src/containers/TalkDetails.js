@@ -11,7 +11,9 @@ const TalkDetails = ({ talk }) => {
         <span>Duración {talk.duration} min.</span>
       </div>
       <p>{talk.details}</p>
-      <Speaker speaker={talk.speaker} />
+      <div>
+        {talk.speakers.map(s => <Speaker speaker={s} />)}
+      </div>
     </section>
   );
 };
