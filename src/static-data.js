@@ -1,6 +1,11 @@
 import moment from "moment";
 let date = moment();
 
+export const event = {
+  name: "e-ver demo app",
+  startDate: "2020-07-06"
+}
+
 export const talks = [
   {
     id: 1,

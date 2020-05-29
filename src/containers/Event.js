@@ -5,8 +5,9 @@ import TalkDetails from "./TalkDetails";
 import TalkList from "./TalkList";
 import SpeakerList from "./SpeakerList";
 import SponsorList from "./SponsorList";
+import CountdownTimer from "./CountdownTimer";
 
-import { talks, sponsors } from "../static-data";
+import { event, talks, sponsors } from "../static-data";
 
 // should be a unique speakers list
 const speakersList = (talks) => {
@@ -23,6 +24,7 @@ const Event = ({ props }) => {
 
   return (
     <>
+      <CountdownTimer startDate={event.startDate} />
       <Video video={selectedTalk.video} />
       <CommentList talk={selectedTalk} />
       <TalkDetails talk={selectedTalk} />
