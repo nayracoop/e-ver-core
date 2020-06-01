@@ -6,6 +6,7 @@ import TalkList from "./TalkList";
 import SpeakerList from "./SpeakerList";
 import SponsorList from "./SponsorList";
 import CountdownTimer from "./CountdownTimer";
+import Subscribe from "./Suscribe";
 
 import { event, talks, sponsors } from "../static-data";
 
@@ -25,6 +26,7 @@ const Event = ({ props }) => {
   return (
     <>
       <CountdownTimer startDate={event.startDate} />
+      <Subscribe handleSubscription={() => {}} />
       <Video video={selectedTalk.video} />
       <CommentList talk={selectedTalk} />
       <TalkDetails talk={selectedTalk} />
