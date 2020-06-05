@@ -1,6 +1,7 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
-import styled, { withTheme } from "styled-components"
+import styled from "styled-components"
+// import styled, { withTheme } from "styled-components"
 import Card from "./ui/Card"
 import Title from "./ui/Title"
 import Button from "./ui/Button"

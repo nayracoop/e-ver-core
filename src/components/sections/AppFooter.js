@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { withTheme } from "styled-components"
-import { Container } from "../layout"
+// import { Container } from "../layout"
 
 const AppFooter = ({ props }) => {
   return (
