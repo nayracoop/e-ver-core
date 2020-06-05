@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { withTheme } from "styled-components"
-import { Container } from "../layout"
+// import { Container } from "../layout"
 import Title from "../snippets/ui/Title"
 import Button from "../snippets/ui/Button"
 import About from "../snippets/About"

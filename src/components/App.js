@@ -1,7 +1,8 @@
 import React from "react";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+// import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
-import Navbar from "./snippets/Navbar";
+// import Navbar from "./snippets/Navbar";
 import AppHeader from "./sections/AppHeader";
 import Homepage from "./templates/Homepage";
 import AppFooter from "./sections/AppFooter";

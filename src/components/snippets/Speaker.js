@@ -4,7 +4,7 @@ import Title from "./ui/Title";
 
 const Speaker = (props) => {
 
-  const { titleLevel = 2 } = props
+  // const { titleLevel = 2 } = props
 
   return (
     <Wrapper>

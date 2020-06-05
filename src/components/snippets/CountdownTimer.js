@@ -6,7 +6,6 @@ const  CountdownTimer = ({startDate}) => {
   const [timeLeft, setTimeLeft] = useState( { days: 0, hours: 0, minutes: 0, seconds: 0 } )
   const stringDate = new Date(startDate).toISOString()
   const timerComponents = []
-  let timer = null
 
   Object.keys(timeLeft).forEach(interval => {
     timerComponents.push(
@@ -17,35 +16,35 @@ const  CountdownTimer = ({startDate}) => {
     );
   });
 
-  const calculateTimeLeft = () => {
-    // check time zone
-    // maybe better to use moment
-    const difference = +new Date(startDate) - +new Date()
-    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 }
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      // check time zone
+      // maybe better to use moment
+      const difference = +new Date(startDate) - +new Date()
+      let calcTimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 }
+  
+      if (difference > 0) {
+        calcTimeLeft = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        }
       }
+  
+      return calcTimeLeft;
     }
 
-    return timeLeft;
-  }
+    const updateCountdown = () => {
+      const calculatedTimeLeft = calculateTimeLeft()
+      setTimeLeft(calculatedTimeLeft)
+    }
 
-  const updateDountdown = () => {
-    const calculatedTimeLeft = calculateTimeLeft()
-    setTimeLeft(calculatedTimeLeft)
-  }
-
-  useEffect(() => {    
-    timer = setTimeout(updateDountdown, 1000)
+    const timer = setTimeout(updateCountdown, 1000)
     return () => { 
       clearTimeout(timer)
     }
-  }, [timeLeft])
+  }, [timeLeft, startDate])
   
   return (
     <Wrapper dateTime={stringDate}>

@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { withTheme } from "styled-components"
-import { Container } from "../layout"
-import Navbar from "../snippets/Navbar"
+// import { Container } from "../layout"
+// import Navbar from "../snippets/Navbar"
 import MenuButton from "../snippets/ui/MenuButton"
 
 const AppHeader = (props) => {

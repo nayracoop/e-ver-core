@@ -19,13 +19,13 @@ const Wrapper = styled.section`
   position: relative;
 `
 
-const Timeline = styled.div`
-  width: 300px;
-  border: 1px dashed ${props => props.theme.color.text};
-  border-left: 0;
-  position: absolute;
-  left: -300px;
-  top: 3.5em;
-  bottom: 0;
-  // border-radius: 16px;
-`
+// const Timeline = styled.div`
+//   width: 300px;
+//   border: 1px dashed ${props => props.theme.color.text};
+//   border-left: 0;
+//   position: absolute;
+//   left: -300px;
+//   top: 3.5em;
+//   bottom: 0;
+//   // border-radius: 16px;
+// `

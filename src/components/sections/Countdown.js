@@ -16,10 +16,10 @@ const Countdown = (props) => {
 
 export default withTheme(Countdown)
 
-const Wrapper = styled.div`
-  background: ${props => props.theme.color.primary};
-  padding: 0.75em 0 1.5em;
-`
+// const Wrapper = styled.div`
+//   background: ${props => props.theme.color.primary};
+//   padding: 0.75em 0 1.5em;
+// `
 
 const SectionTitle = styled(Title)`
   font-size: 1.25em;
