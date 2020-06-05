@@ -1,0 +1,43 @@
+name: Ever CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # strategy:
+    #  matrix:
+    #    node-version: [12.x]                       # Using current LTS [10.x, 12.x, 14.x]
+
+    steps:
+    - uses: actions/checkout@v2                     # checkout@v2 action. Because the repository is needed
+
+    - name: Foolish greeting
+      uses: ./.github/actions/greeting              # Reference to a local action in the current repo
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - run: npm ci 
+    - run: npm run build --if-present
+    - run: npm test
+
+    # 
+    # - name: FTP Deploy
+    #  uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    #  with:
+    #    # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+    #    ftp-server: 
+    #    # FTP account username
+    #    ftp-username: 
+    #    # FTP account password
+    #    ftp-password: 
+    #    # The local folder to copy, defaults to root project folder
+    #    local-dir: # optional, default is ./
+    #    # Passes through options into git-ftp
+    #    git-ftp-args: # optional
