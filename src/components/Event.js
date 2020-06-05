@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Video from "./Video";
 import CommentList from "./CommentList";
 import TalkDetails from "./TalkDetails";
-import TalkList from "./TalkList";
-import SpeakerList from "./SpeakerList";
-import SponsorList from "./SponsorList";
-import CountdownTimer from "./CountdownTimer";
+import TalkList from "./sections/Program";
+import SpeakersList from "./sections/_Speakers";
+import SponsorList from "./sections/Sponsors";
+import CountdownTimer from "./snippets/CountdownTimer";
 
 import { event, talks, sponsors } from "../static-data";
 
@@ -29,7 +29,7 @@ const Event = ({ props }) => {
       <CommentList talk={selectedTalk} />
       <TalkDetails talk={selectedTalk} />
       <TalkList talks={talks} onSelectTalk={selectTalk} />
-      <SpeakerList speakersList={speakersList(talks)} />
+      <SpeakersList speakersList={speakersList(talks)} />
       <SponsorList sponsors={sponsors} />
     </>
   );

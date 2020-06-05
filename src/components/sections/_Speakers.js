@@ -1,7 +1,7 @@
 import React from "react";
-import Speaker from "./Speaker";
+import Speaker from "../snippets/Speaker";
 
-const SpeakerList = ({ speakersList }) => {
+const Speakers = ({ speakersList }) => {
   return (
     <section>
       <h2>Disertantes</h2>
@@ -16,4 +16,4 @@ const SpeakerList = ({ speakersList }) => {
   );
 };
 
-export default SpeakerList;
+export default Speakers;

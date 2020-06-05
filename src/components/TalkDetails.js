@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import Speaker from "./Speaker";
+import Speaker from "./snippets/Speaker";
 
 const TalkDetails = ({ talk }) => {
   return (

@@ -101,13 +101,13 @@ export const sponsors = [
   {
     id: 1,
     name: "Fafa",
-    logo: "logo.png",
+    logo: "logo.svg",
     website: "https://nayra.coop"
   },
   {
     id: 2,
     name: "tutu",
-    logo: "logo.png",
+    logo: "logo.svg",
     website: "https://nayra.coop"
   }
 ];

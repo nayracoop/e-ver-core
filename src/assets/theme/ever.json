@@ -1,0 +1,18 @@
+{
+  "layout": {
+    "breakpoints": { "xl": 1200, "l": 992, "m": 768, "s": 576 },
+    "gap": 25
+  },
+  "color": {
+    "primary": "#f72d7d",
+    "secondary": "#ff0000",
+    "background": "#f8f8f8",
+    "border": "#ccc",
+    "text": "#04090d"
+  },
+  "font": {
+    "import": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap",
+    "display": { "family": "'Roboto', serif", "weight": 700 },
+    "text": { "family": "'Roboto', serif", "weight": 300 }
+  }
+}
