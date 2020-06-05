@@ -5,7 +5,7 @@ import Navbar from "./snippets/Navbar";
 import AppHeader from "./sections/AppHeader";
 import Homepage from "./templates/Homepage";
 import AppFooter from "./sections/AppFooter";
-import Event from "./Event";
+// import Event from "./Event";
 
 import theme from '../assets/theme/ever.json'
 
