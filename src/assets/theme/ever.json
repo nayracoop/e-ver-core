@@ -1,7 +1,7 @@
 {
   "layout": {
     "breakpoints": { "xl": 1200, "l": 992, "m": 768, "s": 576 },
-    "gap": 25
+    "gap": 20
   },
   "color": {
     "primary": "#f72d7d",
