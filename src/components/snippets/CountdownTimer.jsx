@@ -41,13 +41,13 @@ const CountdownTimer = ({ startDate }) => {
 
       return calcTimeLeft
     }
-
     const updateCountdown = () => {
       const calculatedTimeLeft = calculateTimeLeft()
       setTimeLeft(calculatedTimeLeft)
     }
 
     const timer = setTimeout(updateCountdown, 1000)
+
     return () => {
       clearTimeout(timer)
     }

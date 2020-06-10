@@ -8,7 +8,7 @@ import About from '../snippets/About'
 const Header = () => {
   return (
     <Wrapper>
-      <Title>Este es el título del evento</Title>
+      <Title>Este es el título del evento demo</Title>
       <About />
       <Button href="#">Call to action</Button>
     </Wrapper>
