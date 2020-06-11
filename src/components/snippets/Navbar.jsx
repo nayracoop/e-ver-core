@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   width: 300px;
   right: 0;
   transform: translateX(${(props) => props.visible ? '0' : '300px' });
-  box-shadow: 0 32px 32px rgba(0,0,0,0.25);
+  box-shadow: ${(props) => props.visible ? '-16px 0 16px rgba(0,0,0,0.08)' : '16px 0 16px rgba(0,0,0,.08);' };
   background: ${props => props.theme.color.background};
   border-bottom: 1px solid ${(props) => props.theme.color.border};
   // border-right: 1px solid ${props => props.theme.color.border};
@@ -40,7 +40,8 @@ const Wrapper = styled.div`
 
   display: flex;
   flex-flow: column wrap;
-  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, box-shadow 50ms ease-out;
+  transition-delay: ${(props) => props.visible ? '0s, 0s' : '0s, 250ms' };
 `
 
 const Configurations = styled.div`
