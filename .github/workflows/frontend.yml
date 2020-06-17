@@ -33,6 +33,16 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
+    - name: Copy ecosystem and restart file via SCP
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SCP_HOST }}
+        username: ${{ secrets.SCP_USERNAME }}
+        password: ${{ secrets.SCP_PASSWORD }}
+        port: ${{ secrets.SCP_PORT }}
+        source: "ecosystem.config.yml,restart.sh"
+        target: "/var/www/develop/demo.e-ever"
+
     - name: Copy build folder via SCP
       uses: appleboy/scp-action@master
       with:
@@ -41,5 +51,16 @@ jobs:
         password: ${{ secrets.SCP_PASSWORD }}
         port: ${{ secrets.SCP_PORT }}
         source: "build"
-        target: "/var/www/staging/demo.e-ever/front"
+        target: "/var/www/develop/demo.e-ever/front"
         strip_components: 1
+
+    - name: Restart pm2
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SCP_HOST }}
+        username: ${{ secrets.SCP_USERNAME }}
+        password: ${{ secrets.SCP_PASSWORD }}
+        port: ${{ secrets.SCP_PORT }}
+        script: |
+          cd /var/www/develop/demo.e-ever
+          . restart.sh front-ever
