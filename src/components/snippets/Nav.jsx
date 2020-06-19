@@ -8,9 +8,9 @@ const Nav = ({ className }) => {
   return (
     <Wrapper className={className}>
       <ul>
-        <Item><Link to="/home-1" activeClassName="active">Item 1</Link></Item>
-        <Item><Link to="/home-2" activeClassName="active">Item 2</Link></Item>
-        <Item><Link to="/home-3" activeClassName="active">Item 3</Link></Item>
+        <Item><Link exact to="/" activeClassName="active">Home: Upcoming event</Link></Item>
+        <Item><Link exact to="/ongoing" activeClassName="active">Home: Ongoing event</Link></Item>
+        <Item><Link exact to="/talk" activeClassName="active">Home: Talk</Link></Item>
       </ul>
     </Wrapper>
   )
@@ -31,8 +31,9 @@ const Link = styled(NavLink)`
   font-size: ${(props) => props.theme.size}em;
   color: ${(props) => props.theme.color.text};
   text-decoration: none;
-  font-size: 1.375em;
-  padding: 0.625em ${props => props.theme.layout.gap}px;
+  font-size: 1.25em;
+  padding: 0.75em ${props => props.theme.layout.gap}px;
+  margin: 0.25em auto;
   transition: background 200ms ease-in-out, color 200ms ease-in-out;
   // border-bottom: 1px solid ${(props) => props.theme.color.border};
 

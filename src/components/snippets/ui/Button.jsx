@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Button = ({ children }) => {
-  return <Link href='""'>{children}</Link>
+const Button = ({ children, className, style }) => {
+  return <Link className={className} style={style} href='""'>{children}</Link>
 }
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.string
 }
 
 export default Button

@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import Video from './Video'
-import CommentList from './CommentList'
-import TalkDetails from './TalkDetails'
-import TalkList from './sections/Program'
-import SpeakersList from './sections/_Speakers'
-import SponsorList from './sections/Sponsors'
-import CountdownTimer from './snippets/CountdownTimer'
-import Subscribe from './Suscribe'
+import Video from '../Video'
+import CommentList from '../CommentList'
+import TalkDetails from '../TalkDetails'
+import TalkList from '../sections/Program'
+import SpeakersList from '../sections/_Speakers'
+import SponsorList from '../sections/Sponsors'
+import CountdownTimer from '../snippets/CountdownTimer'
+import Subscribe from '../Suscribe'
 // import SpeakerList from './SpeakerList'
 // import TalkList from "./TalkList";
 // import SponsorList from "./SponsorList";
 
-import { event, talks, sponsors } from '../static-data'
+import { event, talks, sponsors } from '../../static-data'
 
 // should be a unique speakers list
 const speakersList = (t) => {

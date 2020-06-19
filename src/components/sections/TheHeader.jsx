@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Navbar from "../snippets/Navbar"
 import MenuButton from '../snippets/ui/MenuButton'
 
-const AppHeader = ({ logo }) => {
+const TheHeader = ({ logo }) => {
 
   const [ opened, setOpened ] = useState(false)
 
@@ -42,11 +42,11 @@ const AppHeader = ({ logo }) => {
   )
 }
 
-AppHeader.propTypes = {
+TheHeader.propTypes = {
   logo: PropTypes.string.isRequired,
 }
 
-export default AppHeader
+export default TheHeader
 
 const Wrapper = styled.header`
   position: sticky;

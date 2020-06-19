@@ -65,7 +65,7 @@ const Options = styled.select`
   font-weight: ${(props) => props.theme.font.display.weight};
   
   color: ${(props) => props.theme.color.text};
-  font-size: 1.375em;
+  font-size: 1.25em;
 
   border: 0;
   background: transparent;

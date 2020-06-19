@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Speaker from './Speaker'
 
-const SpeakersList = ({ speakers, titleLevel = 2 }) => {
+const SpeakersList = ({ speakers, titleLevel = 2, className }) => {
   const list = speakers.map((speaker) => (
     <Item key={speaker.id}>
       <Speaker speaker={speaker} titleLevel={titleLevel} />
@@ -11,7 +11,7 @@ const SpeakersList = ({ speakers, titleLevel = 2 }) => {
   ))
 
   return (
-    <Wrapper speakers titleLevel>
+    <Wrapper className={className} speakers titleLevel>
       {list}
     </Wrapper>
   )
@@ -20,6 +20,7 @@ const SpeakersList = ({ speakers, titleLevel = 2 }) => {
 SpeakersList.propTypes = {
   speakers: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   titleLevel: PropTypes.number,
+  className: PropTypes.string,
 }
 SpeakersList.defaultProps = {
   titleLevel: 2,

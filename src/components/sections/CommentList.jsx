@@ -7,7 +7,7 @@ import {
   colors,
   animals,
 } from 'unique-names-generator'
-import Comment from './Comment'
+import Comment from '../snippets/Comment'
 
 const randomName = uniqueNamesGenerator({
   dictionaries: [adjectives, colors, animals],

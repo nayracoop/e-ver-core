@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import Speaker from './snippets/Speaker'
+import Speaker from '../snippets/Speaker'
 
 const TalkDetails = ({ talk }) => {
   return (
