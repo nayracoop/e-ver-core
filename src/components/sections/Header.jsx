@@ -5,11 +5,11 @@ import Title from '../snippets/ui/Title'
 import Button from '../snippets/ui/Button'
 import About from '../snippets/About'
 
-const Header = () => {
+const Header = ({event}) => {
   return (
     <Wrapper>
-      <Title>Este es el título del evento demo</Title>
-      <About />
+      <Title>{event.name}</Title>
+      <About description={event.description} />
       <Button href="#">Call to action</Button>
     </Wrapper>
   )

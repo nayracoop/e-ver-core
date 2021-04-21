@@ -10,7 +10,7 @@ const TalkDetails = ({ talk }) => {
       <div className="timeDetails">
         <span>
           Fecha
-          {moment(talk.begin).format('dddd D/M/YYYY HH:mm')}
+          {moment(talk.start_time).format('dddd D/M/YYYY HH:mm')}
         </span>
         {' |'}
         <span>{`Duración ${talk.duration} min.`}</span>

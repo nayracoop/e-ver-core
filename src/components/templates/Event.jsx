@@ -11,7 +11,7 @@ import Subscribe from '../Suscribe'
 // import TalkList from "./TalkList";
 // import SponsorList from "./SponsorList";
 
-import { event, talks, sponsors } from '../../static-data'
+import { event } from '../../placeholder-data'
 
 // should be a unique speakers list
 const speakersList = (t) => {
@@ -22,19 +22,19 @@ const speakersList = (t) => {
 }
 
 const Event = () => {
-  const [selectedTalk, setSelectedTalk] = useState(talks[0])
+  const [selectedTalk, setSelectedTalk] = useState(event.talks[0])
   const selectTalk = (talk) => setSelectedTalk(talk)
 
   return (
     <>
-      <CountdownTimer startDate={event.startDate} />
+      <CountdownTimer startDate={event.start_time} />
       <Subscribe handleSubscription={() => {}} />
       <Video video={selectedTalk.video} />
       <CommentList talk={selectedTalk} />
       <TalkDetails talk={selectedTalk} />
-      <TalkList talks={talks} onSelectTalk={selectTalk} />
-      <SpeakersList speakersList={speakersList(talks)} />
-      <SponsorList sponsors={sponsors} />
+      <TalkList talks={event.talks} onSelectTalk={selectTalk} />
+      <SpeakersList speakersList={speakersList(event.talks)} />
+      <SponsorList sponsors={event.sponsors} />
     </>
   )
 }

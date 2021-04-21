@@ -3,11 +3,11 @@ import ReactMarkdown from 'react-markdown'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
-const About = () => {
+const About = ({description}) => {
   const { t } = useTranslation()
   return (
     <Wrapper>
-      <ReactMarkdown source={t('about')} />
+      <ReactMarkdown source={description} />
     </Wrapper>
   )
 }

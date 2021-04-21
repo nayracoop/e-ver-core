@@ -6,27 +6,27 @@ import Countdown from '../sections/Countdown'
 import Program from '../sections/Program'
 import Sponsors from '../sections/Sponsors'
 
-import { event, talks, sponsors } from '../../static-data'
+import { event } from '../../placeholder-data'
 
 const Homepage = () => {
   return (
     <main>
       <Segment>
         <Container>
-          <Header />
+          <Header event={event}/>
         </Container>
       </Segment>
       <Segment>
-        <Countdown startDate={event.startDate} />
+        <Countdown startDate={event.start_time} />
       </Segment>
       <Segment>
         <Container>
-          <Program talks={talks} onSelectTalk={() => {}} />
+          <Program talks={event.talks} onSelectTalk={() => {}} />
         </Container>
       </Segment>
       <Segment>
         <Container>
-          <Sponsors sponsors={sponsors} />
+          <Sponsors sponsors={event.sponsors} />
         </Container>
       </Segment>
     </main>
