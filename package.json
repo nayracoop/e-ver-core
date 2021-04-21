@@ -2,7 +2,7 @@
   "name": "e-ver-demo",
   "version": "0.1.0",
   "proxy": "http://localhost:3001",
-  "homepage": "https://develop.nayra.coop/ever-demo/",
+  "homepage": "https://develop.nayra.coop/",
   "scripts": {
     "startreact": "react-scripts start",
     "build": "react-scripts build",
