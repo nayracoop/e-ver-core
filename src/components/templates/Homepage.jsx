@@ -6,9 +6,7 @@ import Countdown from '../sections/Countdown'
 import Program from '../sections/Program'
 import Sponsors from '../sections/Sponsors'
 
-import { event } from '../../placeholder-data'
-
-const Homepage = () => {
+const Homepage = ({event}) => {
   return (
     <main>
       <Segment>

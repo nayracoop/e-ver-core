@@ -114,7 +114,7 @@ const sponsors = [
   },
 ]
 
-export const event = {
+export const event_placeholder = {
   name: 'e-ver demo',
   description: `After many months of planning, designing and developing our e-ver demo platform, we are happy to anounce that is is ready! 
                 And we would like to share with everyone all the work that we did on this online virtual event experiencie.`,

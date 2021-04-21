@@ -11,8 +11,6 @@ import Subscribe from '../Suscribe'
 // import TalkList from "./TalkList";
 // import SponsorList from "./SponsorList";
 
-import { event } from '../../placeholder-data'
-
 // should be a unique speakers list
 const speakersList = (t) => {
   const speakers = t.map((talk) => talk.speakers).flat()
@@ -21,7 +19,7 @@ const speakersList = (t) => {
   })
 }
 
-const Event = () => {
+const Event = ({event}) => {
   const [selectedTalk, setSelectedTalk] = useState(event.talks[0])
   const selectTalk = (talk) => setSelectedTalk(talk)
 

@@ -1,5 +1,5 @@
 /* eslint global-require: 0 */
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 // import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
@@ -10,15 +10,32 @@ import TheFooter from './sections/TheFooter'
 // import Event from "./Event";
 
 import theme from '../assets/theme/ever.json'
+import { event_placeholder } from '../placeholder-data'
+
+const url = process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : '';
 
 const App = () => {
+  const [event, setEvent] = useState(event_placeholder)
+
+  useEffect(() => {    
+    fetch(url + '/api/events/' +'13') // hardcoding event id for now
+      .then(res => res.json())
+      .then((res) => {
+        setEvent(res.data)
+      })
+      .catch(e => {
+        setEvent(event_placeholder)
+      })
+  }, []);
+
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         {/* <Navbar /> language & timezone */}
         <TheHeader logo={require('../assets/img/logo.svg')} />
         {/* Acá va swtich y el template correspondiente basado en router */}
-        <Homepage />
+        <Homepage event={event} />
 
         {/* <main className="App-content">
           <Event />
