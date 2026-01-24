@@ -20,7 +20,7 @@
     "express-pino-logger": "^5.0.0",
     "i18next": "^19.4.5",
     "i18next-browser-languagedetector": "^4.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.23",
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.31",
     "prop-types": "^15.7.2",
