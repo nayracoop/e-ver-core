@@ -37,7 +37,7 @@
     "unique-names-generator": "^4.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^9.26.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-better-styled-components": "^1.1.2",
